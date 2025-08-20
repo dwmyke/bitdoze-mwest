@@ -42,7 +42,7 @@ const tagPosts = tags.map((tag) => ({
 }));
 ---
 
-<section class="py-12 bg-gradient-to-b from-gray-850 to-white dark:bg-gradient-to-b dark:from-gray-800 dark:to-black">
+<section class="py-12 bg-linear-to-b from-gray-850 to-white dark:bg-linear-to-b dark:from-gray-800 dark:to-black">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-10 text-gray-900 dark:text-gray-100">Popular Topics</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -61,8 +61,8 @@ const tagPosts = tags.map((tag) => ({
                   href={`/${post.slug}/`}
                   class="flex items-center gap-4 group hover:bg-gray-50 dark:hover:bg-gray-700/50 rounded-lg py-3 first:pt-0 last:pb-0"
                 >
-                  <div class="relative flex-shrink-0 w-20 overflow-hidden rounded-lg shadow-sm">
-                    <div class="aspect-[16/9]">
+                  <div class="relative shrink-0 w-20 overflow-hidden rounded-lg shadow-sm">
+                    <div class="aspect-video">
                       {post.data.image && (
                         <Image
                           src={post.data.image}
@@ -74,7 +74,7 @@ const tagPosts = tags.map((tag) => ({
                       )}
                     </div>
                   </div>
-                  <div class="flex-grow min-w-0">
+                  <div class="grow min-w-0">
                     <h4 class="text-sm font-medium text-gray-800 dark:text-gray-500 group-hover:text-blue-600 dark:group-hover:text-blue-400 line-clamp-2">
                       {post.data.title}
                     </h4>

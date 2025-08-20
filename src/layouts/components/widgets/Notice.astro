@@ -53,16 +53,16 @@ const icons = {
   {title ? (
     <div class="mb-3">
       <div class="flex items-center">
-        <div class={`flex-shrink-0 mr-2 ${typeStyles[type].icon}`} set:html={icons[type]} />
+        <div class={`shrink-0 mr-2 ${typeStyles[type].icon}`} set:html={icons[type]} />
         <h3 class={`text-lg font-medium ${typeStyles[type].title}`}>{title}</h3>
       </div>
     </div>
   ) : (
     <div class="flex items-start mb-2">
-      <div class={`flex-shrink-0 mr-3 ${typeStyles[type].icon}`} set:html={icons[type]} />
+      <div class={`shrink-0 mr-3 ${typeStyles[type].icon}`} set:html={icons[type]} />
     </div>
   )}
-  <div class={`prose dark:prose-invert prose-lg !max-w-none ${typeStyles[type].content} ${title ? 'pl-7' : ''}`}>
+  <div class={`prose dark:prose-invert prose-lg max-w-none! ${typeStyles[type].content} ${title ? 'pl-7' : ''}`}>
     <slot />
   </div>
 </div>

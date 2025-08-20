@@ -86,19 +86,19 @@ const recentPosts = allPosts
                 href={`/${post.slug}/`}
                 class="flex gap-3 group items-start"
               >
-                <div class="flex-grow">
+                <div class="grow">
                   <h4 class="text-sm text-gray-800 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 line-clamp-2">
                     {post.data.title}
                   </h4>
                 </div>
                 {post.data.image && (
-                  <div class="flex-shrink-0 w-16">
+                  <div class="shrink-0 w-16">
                     <Image
                       src={post.data.image}
                       alt={post.data.title}
                       width={64}
                       height={36}
-                      class="rounded w-full aspect-[16/9] object-cover"
+                      class="rounded w-full aspect-video object-cover"
                     />
                   </div>
                 )}
