@@ -1,7 +1,10 @@
+// Get the current year for the copyright notice
+const currentYear = new Date().getFullYear();
+
 // Site configuration
 export const siteConfig = {
   // Site details from config.json:site
-  title: "Bit Doze Astro Blog Theme", // from config.json:site.title
+  title: "Mikel-Jon (Mike) West", // from config.json:site.title
   // description is used from existing site.ts, will be updated by config.json:metadata.meta_description
   // url is removed, Astro.site will be used
 
@@ -9,10 +12,10 @@ export const siteConfig = {
   logo: "/logo.svg",
   logoWidth: "200",
   logoHeight: "30",
-  logoText: "Bit Doze Astro Blog Theme",
+  logoText: "Mikel-Jon (Mike) West",
 
   // SEO metadata from config.json:metadata
-  author: "Your Name", // from config.json:metadata.meta_author
+  author: "Mikel-Jon West", // from config.json:metadata.meta_author
   description: "A modern, responsive blog theme for Astro with support for tags, categories, and series.", // from config.json:metadata.meta_description
   ogImage: "/images/og-image.png", // from config.json:metadata.meta_image (replaces defaultImage)
 
@@ -28,5 +31,5 @@ export const siteConfig = {
   },
   
   // Params from config.json:params
-  copyright: "Copyright © 2025", // from config.json:params.copyright
+  copyright: "Copyright © {currentYear}", // from config.json:params.copyright
 };
