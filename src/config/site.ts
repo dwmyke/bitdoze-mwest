@@ -16,7 +16,7 @@ export const siteConfig = {
 
   // SEO metadata from config.json:metadata
   author: "Mikel-Jon West", // from config.json:metadata.meta_author
-  description: "A modern, responsive blog theme for Astro with support for tags, categories, and series.", // from config.json:metadata.meta_description
+  description: "Mike West - Filmmaker | Artist | Animator", // from config.json:metadata.meta_description
   ogImage: "/images/og-image.png", // from config.json:metadata.meta_image (replaces defaultImage)
 
   // Pagination settings from config.json:settings

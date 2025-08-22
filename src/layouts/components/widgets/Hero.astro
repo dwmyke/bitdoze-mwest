@@ -8,31 +8,34 @@ const socialLinks = Object.entries(socialData)
 
 // Map social platforms to their respective icon names and colors
 const socialIcons = {
-  facebook: { icon: 'mdi:facebook', color: 'bg-blue-600' },
-  twitter: { icon: 'mdi:twitter', color: 'bg-blue-500' },
-  instagram: { icon: 'mdi:instagram', color: 'bg-pink-600' },
-  youtube: { icon: 'mdi:youtube', color: 'bg-red-600' },
-  linkedin: { icon: 'mdi:linkedin', color: 'bg-blue-700' },
-  github: { icon: 'mdi:github', color: 'bg-gray-800' },
-  gitlab: { icon: 'mdi:gitlab', color: 'bg-orange-600' },
-  medium: { icon: 'mdi:medium', color: 'bg-green-700' },
-  codepen: { icon: 'mdi:codepen', color: 'bg-gray-900' },
-  bitbucket: { icon: 'mdi:bitbucket', color: 'bg-blue-800' },
-  dribbble: { icon: 'mdi:dribbble', color: 'bg-pink-500' },
-  behance: { icon: 'mdi:behance', color: 'bg-blue-900' },
-  pinterest: { icon: 'mdi:pinterest', color: 'bg-red-700' },
-  soundcloud: { icon: 'mdi:soundcloud', color: 'bg-orange-500' },
-  tumblr: { icon: 'mdi:tumblr', color: 'bg-blue-800' },
-  reddit: { icon: 'mdi:reddit', color: 'bg-orange-600' },
-  vk: { icon: 'mdi:vk', color: 'bg-blue-600' },
-  whatsapp: { icon: 'mdi:whatsapp', color: 'bg-green-500' },
-  snapchat: { icon: 'mdi:snapchat', color: 'bg-yellow-400' },
-  vimeo: { icon: 'mdi:vimeo', color: 'bg-blue-700' },
-  tiktok: { icon: 'mdi:music', color: 'bg-black' },
-  email: { icon: 'mdi:email', color: 'bg-red-500' },
-  phone: { icon: 'mdi:phone', color: 'bg-green-600' },
-  website: { icon: 'mdi:web', color: 'bg-purple-600' },
-  rss: { icon: 'mdi:rss', color: 'bg-orange-500' }
+  bluesky: { icon: 'simple-icons:bluesky', color: 'sky-600' },
+  imdb: { icon: 'simple-icons:imdb', color: 'yellow-600' },
+  peertube: { icon: 'simple-icons:peertube', color: 'red-600' },
+  facebook: { icon: 'simple-icons:facebook', color: 'blue-600' },
+  twitter: { icon: 'simple-icons:twitter', color: 'blue-500' },
+  instagram: { icon: 'simple-icons:instagram', color: 'pink-600' },
+  youtube: { icon: 'simple-icons:youtube', color: 'red-600' },
+  linkedin: { icon: 'simple-icons:linkedin', color: 'blue-700' },
+  github: { icon: 'simple-icons:github', color: 'gray-800' },
+  gitlab: { icon: 'simple-icons:gitlab', color: 'orange-600' },
+  medium: { icon: 'simple-icons:medium', color: 'green-700' },
+  codepen: { icon: 'simple-icons:codepen', color: 'gray-900' },
+  bitbucket: { icon: 'simple-icons:bitbucket', color: 'blue-800' },
+  dribbble: { icon: 'simple-icons:dribbble', color: 'pink-500' },
+  behance: { icon: 'simple-icons:behance', color: 'blue-900' },
+  pinterest: { icon: 'simple-icons:pinterest', color: 'red-700' },
+  soundcloud: { icon: 'simple-icons:soundcloud', color: 'orange-500' },
+  tumblr: { icon: 'simple-icons:tumblr', color: 'blue-800' },
+  reddit: { icon: 'simple-icons:reddit', color: 'orange-600' },
+  vk: { icon: 'simple-icons:vk', color: 'blue-600' },
+  whatsapp: { icon: 'simple-icons:whatsapp', color: 'green-500' },
+  snapchat: { icon: 'simple-icons:snapchat', color: 'yellow-400' },
+  vimeo: { icon: 'simple-icons:vimeo', color: 'blue-700' },
+  tiktok: { icon: 'simple-icons:music', color: 'black' },
+  email: { icon: 'simple-icons:email', color: 'red-500' },
+  phone: { icon: 'simple-icons:phone', color: 'green-600' },
+  website: { icon: 'simple-icons:web', color: 'purple-600' },
+  rss: { icon: 'simple-icons:rss', color: 'orange-500' }
 };
 ---
 
@@ -41,49 +44,28 @@ const socialIcons = {
     <div class="py-12 md:py-20">
       <div class="text-center pb-10 md:pb-16">
         <h1 class="text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-4 font-heading text-gray-900 dark:text-white">
-          Welcome to
-          <span class="bg-clip-text text-transparent bg-linear-to-r from-blue-500 to-indigo-500 sm:whitespace-nowrap"
-            >Bit Doze</span
-          >
+          Mikel-Jon
+          <span class="bg-clip-text text-transparent bg-linear-to-r from-blue-500 to-indigo-300 hover:text-orange-300 sm:whitespace-nowrap">[Mike]</span>
+            West
         </h1>
         <div class="max-w-3xl mx-auto">
-          <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
-            Join the community to find out more about, VPS, blogging, CMS.
-          </p>
+          <h2 class="text-3xl text-gray-600 dark:text-gray-300 mb-8 hover:text-indigo-500">
+            Filmmaker | Artist | Animator 
+          </h2>
         </div>
 
         <div class="flex justify-center gap-4">
           {socialLinks.map(([platform, url]) => {
             const { icon, color } = socialIcons[platform] || { icon: 'mdi:link', color: 'bg-gray-600' };
-            
-            // Special case for Bluesky which isn't in the standard icon set
-            if (url.includes('bsky.app')) {
-              return (
-                <a
-                  href={url}
-                  class="group inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-sky-500 dark:hover:bg-sky-600 transition-all duration-300 hover:scale-110"
-                  aria-label="Bluesky"
-                >
-                  <svg 
-                    class="w-6 h-6 text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-300" 
-                    viewBox="0 0 512 512"
-                    fill="currentColor"
-                  >
-                    <path d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z"/>
-                  </svg>
-                </a>
-              );
-            }
-            
             return (
               <a
                 href={url}
-                class={`group inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 hover:${color} dark:hover:${color} transition-all duration-300 hover:scale-110`}
+                class={`group inline-flex items-center justify-center w-18 h-18 rounded-lg bg-gray-100 dark:bg-gray-800 transition-all duration-300 hover:scale-110 hover:bg-${color} dark:hover:bg-${color}`}
                 aria-label={platform.charAt(0).toUpperCase() + platform.slice(1)}
               >
                 <Icon 
                   name={icon} 
-                  class="w-6 h-6 text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-300" 
+                  class={`text-2xl text-gray-600 dark:text-gray-300 dark:group-hover:text-white group-hover:text-black transition-colors duration-300`} 
                 />
               </a>
             );
