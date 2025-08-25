@@ -17,7 +17,7 @@ export const siteConfig = {
   // SEO metadata from config.json:metadata
   author: "Mikel-Jon West", // from config.json:metadata.meta_author
   description: "Mike West - Filmmaker | Artist | Animator", // from config.json:metadata.meta_description
-  ogImage: "/images/og-image.png", // from config.json:metadata.meta_image (replaces defaultImage)
+  ogImage: "/social.jpg", // from config.json:metadata.meta_image (replaces defaultImage)
 
   // Pagination settings from config.json:settings
   postsPerPage: 11, // from config.json:settings.pagination
