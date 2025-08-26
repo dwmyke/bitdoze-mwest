@@ -7,8 +7,8 @@
 /* Define CSS variables for colors and fonts */
 :root {
   /* Font families */
-  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: var(--font-spline), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: var(--font-erode), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   
   /* Colors - Light Mode */
@@ -25,7 +25,7 @@
   --color-primary-950: #172554;
   
   /* Background colors - Light Mode */
-  --color-bg-base: #ffffff;
+  --color-bg-base: #eef2ff;
   --color-bg-muted: #f9fafb;
   --color-bg-subtle: #f3f4f6;
   
@@ -35,8 +35,8 @@
   --color-text-subtle: #9ca3af;
   
   /* Border colors - Light Mode */
-  --color-border-base: #e5e7eb;
-  --color-border-muted: #f3f4f6;
+  --color-border-base: #f8de4bff;
+  --color-border-muted: #f6f3f6ff;
   
   /* Shadow colors - Light Mode */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);

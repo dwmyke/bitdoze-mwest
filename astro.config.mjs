@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
 import icon from 'astro-icon';
@@ -13,6 +13,23 @@ export default defineConfig({
   
   // Base path (set to '/' for most sites)
   base: '/',
+
+  // Experimental Fonts
+
+  experimental: {
+    fonts: [
+      {
+      provider: fontProviders.fontshare(),
+      name: "Erode",
+      cssVariable: "--font-erode"
+    },
+    {
+      provider: fontProviders.fontshare(),
+      name: "Spline Sans",
+      cssVariable: "--font-spline"
+    }
+  ]
+  },
   
   // Configure Vite plugins and server settings
   vite: {
