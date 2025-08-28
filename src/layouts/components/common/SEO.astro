@@ -10,10 +10,6 @@ export interface Props {
   canonical?: string;
   publishDate?: Date;
   modifiedDate?: Date;
-  author?: {
-    name: string;
-    url?: string;
-  };
   tags?: string[];
   categories?: string[];
   // For breadcrumbs
@@ -38,7 +34,7 @@ const {
   canonical = Astro.url.pathname,
   publishDate,
   modifiedDate,
-  author,
+  author = siteConfig.author,
   tags,
   categories
 } = Astro.props;
@@ -137,7 +133,7 @@ if (article && publishISODate) {
     "author": author ? {
       "@type": "Person",
       "name": author.name,
-      "url": author.url
+      "url": Astro.site
     } : null,
     "publisher": {
       "@type": "Organization",

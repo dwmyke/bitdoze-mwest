@@ -27,7 +27,6 @@ type Post = {
     image?: any;
     tags?: string[];
     categories?: string[];
-    authors?: string[];
     series?: [string, string]; // [seriesName, position]
     canonical?: string;
   };
@@ -161,14 +160,6 @@ const relatedPosts = getRelatedPosts(currentPost, otherPosts, limit);
             )}
             
             <div class="flex items-center justify-between mt-4 text-sm text-gray-500 dark:text-gray-400">
-              {/* Author */}
-              {post.data.authors && post.data.authors.length > 0 && (
-                <div class="flex items-center">
-                  <Icon name="mdi:account" class="w-4 h-4 mr-1" />
-                  <span>{post.data.authors[0]}</span>
-                </div>
-              )}
-              
               {/* Date */}
               {post.data.date && (
                 <div class="flex items-center">

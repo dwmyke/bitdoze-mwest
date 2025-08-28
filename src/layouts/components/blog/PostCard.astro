@@ -5,7 +5,7 @@ import { formatDate } from '@utils/date';
 import SeriesBadge from './SeriesBadge.astro';
 
 const { post } = Astro.props;
-const { title, description, image, date, categories, authors, series } = post.data;
+const { title, description, image, date, categories, series } = post.data;
 
 // Extract the slug from the canonical URL or use the file name
 const slug = post.data.canonical 
@@ -71,14 +71,6 @@ const isPartOfSeries = series && Array.isArray(series) && series.length === 2;
     )}
     
     <div class="flex items-center justify-between mt-4 text-sm text-gray-500 dark:text-gray-400">
-      <!-- Author -->
-      {authors && authors.length > 0 && (
-        <div class="flex items-center">
-          <Icon name="mdi:account" class="w-4 h-4 mr-1" />
-          <span>{authors[0]}</span>
-        </div>
-      )}
-      
       <!-- Date -->
       {date && (
         <div class="flex items-center">
