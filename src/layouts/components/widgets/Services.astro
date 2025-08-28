@@ -1,0 +1,57 @@
+---
+const services = [
+  {
+    title: "Video Editing",
+    desc: "Stroy-driven narrative, ptomotional, commercial, and music video editing.",
+    tone: "from-cyan-600 to-sky-700"
+  },
+  {
+    title: "Titles & Intros",
+    desc: "Full-motion, kinetic typography with illustrations and depth.",
+    tone: "from-rose-600 to-red-700"
+  },
+  {
+    title: "Graphic Design",
+    desc: "Logos, brand systems, posters, key art, and social kits that stand out.",
+    tone: "from-violet-600 to-indigo-700"
+  },
+  {
+    title: "Photo Retouching",
+    desc: "Quality composition, cleanup, resizing, and texturing for print and digital distribution.",
+    tone: "from-emerald-600 to-teal-700"
+  }];
+---
+
+<section id="services" class="relative">
+      <div class="mx-auto max-w-7xl px-4">
+        <div class="mb-6 md:mb-8 flex items-end justify-between">
+          <h2 class="text-2xl md:text-4xl font-semibold">
+            Services
+          </h2>
+          <a
+            class="text-xs md:text-sm text-gray-300 hover:text-base"
+            href="/contact">
+            Commission a project
+          </a>
+        </div>
+        <ul
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+
+          {services.map((service) =>
+          <li
+            key={service.title}
+            class={`relative overflow-hidden rounded-md bg-gradient-to-br ${service.tone} p-4 ring-1 ring-inset ring-white/10`}>
+
+              <div class="absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(255,255,255,0.08),rgba(0,0,0,0))]" />
+              <h3 class="relative z-10 text-white font-semibold">
+                {service.title}
+              </h3>
+              <p class="relative z-10 mt-1 text-sm text-gray-300">
+                {service.desc}
+              </p>
+              <div class="absolute -right-6 -bottom-6 h-24 w-24 rounded-full bg-black/10 ring-1 ring-white/10" />
+            </li>
+          )}
+        </ul>
+      </div>
+    </section>
